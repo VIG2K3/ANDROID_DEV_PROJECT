@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MakeDonationFragment">
+
+    <!-- Top bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:paddingTop="30dp"
+        android:paddingHorizontal="20dp">
+
+        <!-- Back Arrow (left) -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/backarrow_icon"
+            android:contentDescription="Back"
+            app:tint="@color/orange"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Title (center) -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_centerInParent="true"
+            android:text="Pick-Up Request"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange" />
+    </RelativeLayout>
+
+    <!-- Scrollable main content in case screen is small -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="40dp">
+
+            <!-- Photo Icon (clickable, centered) -->
+            <ImageView
+                android:id="@+id/photo_icon"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/photo_icon"
+                android:contentDescription="Upload Photo"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/gray" />
+
+            <!-- Entry Fields -->
+            <EditText
+                android:id="@+id/add_items"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edittext"
+                android:padding="8dp"
+                android:hint="Add Items"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/PickUp_Location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_edittext"
+                android:padding="8dp"
+                android:hint="Pick-up Location"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/PickUp_Time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_edittext"
+                android:padding="8dp"
+                android:hint="Pick-up Time"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/orange"
+                android:text="Submit"
+                android:textColor="@color/darkBlue"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
