@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_centerInParent="true"
-            android:text="Pick-Up Request"
+            android:text="Make Donation"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="@color/orange" />
