@@ -101,6 +101,7 @@ public class SignUpActivity extends AppCompatActivity {
                             userData.put("username", username);
                             userData.put("phone", phone);
                             userData.put("profileImageUrl", "");
+                            userData.put("points", 0);
 
                             FirebaseFirestore.getInstance()
                                     .collection("Users")

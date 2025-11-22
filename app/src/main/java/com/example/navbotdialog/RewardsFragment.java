@@ -94,7 +94,7 @@ public class RewardsFragment extends Fragment {
 
     // Helper function to open RewardDash with reward details
     private void openReward(String name, int imageRes) {
-        Intent intent = new Intent(getActivity(), RewardDash.class);
+        Intent intent = new Intent(getActivity(), RewardCard.class);
         intent.putExtra("reward_name", name);
         intent.putExtra("reward_image", imageRes);
         startActivity(intent);
