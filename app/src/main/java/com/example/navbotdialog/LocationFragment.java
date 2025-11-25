@@ -74,7 +74,7 @@ public class LocationFragment extends Fragment {
         mapView.setTilesScaledToDpi(true);
         mapView.setBuiltInZoomControls(true);
 
-//  Enable rotation gestures
+        //  Enable rotation gestures
         RotationGestureOverlay rotationGestureOverlay = new RotationGestureOverlay(mapView);
         rotationGestureOverlay.setEnabled(true);
         mapView.getOverlays().add(rotationGestureOverlay);
@@ -82,7 +82,7 @@ public class LocationFragment extends Fragment {
 
         IMapController mapController = mapView.getController();
 
-// Bounding box still for reference (Penang Island)
+        // Bounding box still for reference (Penang Island)
         BoundingBox penangBounds = new BoundingBox(
                 5.480,   // north
                 100.350, // east
@@ -90,14 +90,14 @@ public class LocationFragment extends Fragment {
                 100.180  // west
         );
 
-// Set center roughly around Jelutong/Bayan Baru (midpoint between George Town & Queensbay)
+        // Set center roughly around Jelutong/Bayan Baru (midpoint between George Town & Queensbay)
         GeoPoint centerPoint = new GeoPoint(5.360, 100.300);
 
-// Slightly closer zoom to show both halves clearly
+        // Slightly closer zoom to show both halves clearly
         mapController.setZoom(11.5);
         mapController.setCenter(centerPoint);
 
-// Optional animation if you want smooth loading
+        // Optional animation if you want smooth loading
         mapView.postDelayed(() -> {
             mapController.animateTo(centerPoint);
         }, 800);
